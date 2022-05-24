@@ -1,14 +1,22 @@
 package com.example.digitalparenting;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        getMainData();
     }
 
     @Override
@@ -78,5 +88,51 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void getMainData() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference myRef = database.getReference("Content");
+
+
+        //home
+        DatabaseReference home = myRef.child("home");
+
+        //expectant
+        DatabaseReference  childBirth  =  myRef.child("Expectant").child("childbirth");
+        DatabaseReference  sixnine  =  myRef.child("Expectant").child("sixnine");
+
+        //postpo
+        DatabaseReference  onetwo  =  myRef.child("postpartum").child("onetotwo");
+
+
+
+
+
+        onetwo.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                AppData value = dataSnapshot.getValue(AppData.class);
+                //set details
+                if (value != null) {
+                    TextView tv = findViewById(R.id.welcome_paragraph);
+                    tv.setText(value.getContent());
+                    Log.e("Data",value.content);
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
+    }
+
 }
+
+
+
 
