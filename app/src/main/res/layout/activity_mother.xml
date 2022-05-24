@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mother">
+
+    <TextView
+        android:id="@+id/txtMother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to motherhood."
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/ThirdQuarter"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="256dp"
+        android:text="0 - 6 MONTHS"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMother" />
+
+    <Button
+        android:id="@+id/ActivityThree"
+        android:layout_width="149dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ThirdQuarter"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="28dp"
+        android:text="6 - 12 MONTHS"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMother" />
+
+    <Button
+        android:id="@+id/ActivityFour"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="244dp"
+        android:text="1 - 2 YEARS"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThirdQuarter" />
+
+    <Button
+        android:id="@+id/ActivityFive"
+        android:layout_width="157dp"
+        android:layout_height="39dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="236dp"
+        android:layout_marginBottom="512dp"
+        android:text="2 - 4 YEARS"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ActivityThree"
+        app:layout_constraintVertical_bias="0.328" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "769023602070",
+    "project_id": "digital-parenting-a9fa1",
+    "storage_bucket": "digital-parenting-a9fa1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769023602070:android:1f428198720307f8c141b7",
+        "android_client_info": {
+          "package_name": "com.example.digitalparenting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769023602070-ib19k43slcogut02s95k3hjht86cf1kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7bNIUIpPFHAxibO5kXH5bj4Vy2H7XHH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769023602070-ib19k43slcogut02s95k3hjht86cf1kc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
